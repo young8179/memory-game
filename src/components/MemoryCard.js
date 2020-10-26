@@ -2,11 +2,43 @@ import React from "react"
 import './MemoryCard.css';
 import logo from "./dc-logo.png"
 
+
+
+
 class MemoryCard extends React.Component{
+    constructor(props){
+        super(props)
+        this.state ={
+            isFlipped: false
+        }
+    }
+    clickHandler = () =>{
+        this.setState({
+            isFlipped: !this.state.isFlipped
+            
+        } )
+        
+    }
     render(){
+        // let innerClass = "MemoryCard-inner" 
+        // if(this.state.isFlipped === true ){
+            
+        //     innerClass += " flipped"
+        // }
+        // line31 classname should be innerClass if i wanna use above script
         return (
-            <div className="MemoryCard">
-                <img className = "dcImg"src={logo}></img>
+            <div className="MemoryCard" onClick={this.clickHandler}>
+                <div className={this.state.isFlipped? "MemoryCard-inner flipped" : "MemoryCard-inner"}>
+                
+                    <div className="MemoryCard-back">
+                        <img className = "dcImg" src={logo} alt="img of DC"></img>
+                        
+                    </div>
+                    <div className="MemoryCard-front">
+                        ∆
+                    </div>
+
+                </div>
             </div>
         )
     }
