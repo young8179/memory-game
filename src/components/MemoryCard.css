@@ -50,6 +50,7 @@
     cursor: pointer;
     position: relative;
     perspective: 800px;
+    text-align: center;
     /* border: 3px solid #193d49; */
 }
 
