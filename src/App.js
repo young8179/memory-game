@@ -44,25 +44,31 @@ class App extends React.Component {
     const card2 = {...this.state.deck[card2Index]}
     card1.isFlipped = false
     card2.isFlipped = false
+
     const newDeck = this.state.deck.map((card, index)=>{
       if(card1Index === index){
         return card1
-      }else if(card2Index === index){
+      }
+      if(card2Index === index){
         return card2
       }
       return card
     })
+    console.log("flipped")
+
     this.setState({deck:newDeck})
 }
   pickCard = (cardIndex)=>{
     
-    if(this.state.deck[cardIndex].isFlipped){
+    if(this.state.deck[cardIndex].isFlipped ){
       
       return 
     }
     const cardToFlip = {...this.state.deck[cardIndex]}
+    console.log(cardToFlip)
     cardToFlip.isFlipped = true
     let newPickedCards = this.state.pickedCards.concat(cardIndex)
+    console.log(newPickedCards)
     let newDeck = this.state.deck.map((card, index)=>{
       if(cardIndex ===index){
         return cardToFlip
@@ -73,7 +79,9 @@ class App extends React.Component {
     if(newPickedCards.length === 2){
       const card1Index = newPickedCards[0]
       const card2Index = newPickedCards[1]
+      
       if(newDeck[card1Index].symbol !== newDeck[card2Index].symbol){
+        console.log("noSame")
         setTimeout(()=>{
           this.unflipCards(card1Index, card2Index)
         },1000)
