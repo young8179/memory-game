@@ -1,10 +1,10 @@
 import React from "react"
 import './App.css';
-import MemoryCard from "./components/MemoryCard"
+import MemoryCard from "./components/MemoryCard.js"
 
 const generateDeck = () => {
   const symbols = ["∆", "ß", "£", "§", "•", "$", "+", "ø"]
-  const deck = []
+  let deck = []
   for (let i = 0; i < 16; i++) {
     let aCard = {
       isFlipped: false,
@@ -30,7 +30,9 @@ class App extends React.Component {
     super(props)
     this.state = {
       deck: generateDeck(),
-      pickedCards: []
+      pickedCards: [],
+      newPickedCards: []
+
       
     }
 
@@ -39,7 +41,7 @@ class App extends React.Component {
 
   }
   
-  unflipCards = (card1Index, card2Index) =>{
+  unflipCards=(card1Index, card2Index)=>{
     const card1 = {...this.state.deck[card1Index]}
     const card2 = {...this.state.deck[card2Index]}
     card1.isFlipped = false
@@ -58,24 +60,27 @@ class App extends React.Component {
 
     this.setState({deck:newDeck})
 }
-  pickCard = (cardIndex)=>{
+  pickCard=(cardIndex)=>{
     
     if(this.state.deck[cardIndex].isFlipped ){
       
       return 
     }
     const cardToFlip = {...this.state.deck[cardIndex]}
-    console.log(cardToFlip)
+    // console.log(cardToFlip)
     cardToFlip.isFlipped = true
     let newPickedCards = this.state.pickedCards.concat(cardIndex)
-    console.log(newPickedCards)
-    let newDeck = this.state.deck.map((card, index)=>{
-      if(cardIndex ===index){
+    // console.log(newPickedCards)
+    const newDeck = this.state.deck.map((card, index)=>{
+      if(cardIndex === index){
         return cardToFlip
       }
       return card
     })
     // console.log(newDeck)
+    console.log(this.state.pickedCards)
+    console.log(newPickedCards)
+    console.log(this.state)
     if(newPickedCards.length === 2){
       const card1Index = newPickedCards[0]
       const card2Index = newPickedCards[1]
@@ -89,9 +94,9 @@ class App extends React.Component {
       
       newPickedCards = []
     }
-    this.setState({
+    return this.setState({
       deck: newDeck,
-      pickedCard: newPickedCards
+      pickedCards: newPickedCards
     })
   }
   resetGame = () => {
