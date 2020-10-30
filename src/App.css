@@ -1,3 +1,7 @@
+.head-game{
+  font-size: 100px;
+}
+
 .App {
   text-align: center;
 }
@@ -15,7 +19,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 80px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,12 +30,16 @@
 }
 .subtitle{
   color: #767676;
+  margin-bottom: 50px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.reset-btn{
+  background-color: #606dbc;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

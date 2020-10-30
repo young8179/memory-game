@@ -11,8 +11,8 @@
 
 } 
 .MemoryCard-front{
-    font-size: 30px;
-    padding-top: 20px;
+    font-size: 70px;
+    /* padding-top: 20px; */
     transform: rotateY(180deg);
 }
 
@@ -44,8 +44,8 @@
 
 .MemoryCard{
     display: inline-block;
-    width: 150px;
-    height: 80px;
+    width: 250px;
+    height: 120px;
     margin: 5px;
     cursor: pointer;
     position: relative;
@@ -56,6 +56,6 @@
 
 
 .dcImg{
-    
-    width: 80px;
+    margin-top: 9px;
+    height: 90px;
 }

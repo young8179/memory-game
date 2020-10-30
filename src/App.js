@@ -3,7 +3,7 @@ import './App.css';
 import MemoryCard from "./components/MemoryCard.js"
 
 const generateDeck = () => {
-  const symbols = ["∆", "ß", "£", "§", "•", "$", "+", "ø"]
+  const symbols = ["🐶", "🐼", "🐸", "🐙", "🐷", "🐻", "🐝", "🐲"]
   let deck = []
   for (let i = 0; i < 16; i++) {
     let aCard = {
@@ -113,8 +113,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Memory Game</h1>
-          <h2 className="subtitle">Match cards to win!</h2>
+          <h1 className="head-game">Memory Game</h1>
+          <br/>
+          <h3 className="subtitle">Match cards to win!</h3>
 
 
         </header>
@@ -133,7 +134,7 @@ class App extends React.Component {
           </div>
 
         </div>
-        <button onClick={this.resetGame}>Reset Game</button>
+        <button className="btn btn-primary reset-btn"onClick={this.resetGame} type="button">Reset Game</button>
 
       </div>
 

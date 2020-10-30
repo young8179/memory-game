@@ -1,6 +1,7 @@
 import React from "react"
 import './MemoryCard.css'
 import logo from "./dc-logo.png"
+import logo1 from "./disnep2.png"
 
 
 
@@ -31,7 +32,7 @@ class MemoryCard extends React.Component{
                 <div className={this.props.isFlipped? "MemoryCard-inner flipped" : "MemoryCard-inner"}>
                 
                     <div className="MemoryCard-back">
-                        <img className = "dcImg" src={logo} alt="img of DC" />
+                        <img className = "dcImg" src={logo1} alt="img of DC" />
                         
                     </div>
                     <div className="MemoryCard-front">
