@@ -134,7 +134,7 @@ class App extends React.Component {
           </div>
 
         </div>
-        <button className="btn btn-primary reset-btn"onClick={this.resetGame} type="button">Reset Game</button>
+        <button className="btn btn-primary reset-btn mb-5"onClick={this.resetGame} type="button">Reset Game</button>
 
       </div>
 
