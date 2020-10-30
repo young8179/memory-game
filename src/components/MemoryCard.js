@@ -1,6 +1,6 @@
 import React from "react"
 import './MemoryCard.css'
-import logo from "./dc-logo.png"
+// import logo from "./dc-logo.png"
 import logo1 from "./disnep2.png"
 
 
