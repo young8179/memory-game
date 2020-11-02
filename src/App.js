@@ -56,7 +56,7 @@ class App extends React.Component {
       }
       return card
     })
-    console.log("flipped")
+    // console.log("flipped")
 
     this.setState({deck:newDeck})
 }
@@ -78,15 +78,15 @@ class App extends React.Component {
       return card
     })
     // console.log(newDeck)
-    console.log(this.state.pickedCards)
-    console.log(newPickedCards)
-    console.log(this.state)
+    // console.log(this.state.pickedCards)
+    // console.log(newPickedCards)
+    // console.log(this.state)
     if(newPickedCards.length === 2){
       const card1Index = newPickedCards[0]
       const card2Index = newPickedCards[1]
       
       if(newDeck[card1Index].symbol !== newDeck[card2Index].symbol){
-        console.log("noSame")
+        // console.log("noSame")
         setTimeout(()=>{
           this.unflipCards(card1Index, card2Index)
         },1000)
