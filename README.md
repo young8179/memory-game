@@ -32,7 +32,6 @@ Under the repository name, click on the code button and copy the clone URL for t
 3. Run the file <br>
 ``` shell
 npm start
-...
 ```
 <br>
 <br>
