@@ -9,8 +9,8 @@ This is a memory game made with Emojis, and it is my first project using React. 
 
 
 ## :hammer_and_wrench: Used Technologies
-React
-JavaScript
+React<br>
+JavaScript<br>
 CSS
 <br>
 <br>
